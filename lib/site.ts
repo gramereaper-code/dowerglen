@@ -16,7 +16,7 @@ import {
 
 export const SITE = {
   name: "Rasheed Repairs",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rasheed-repairs.onrender.com",
   phone: process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "",
