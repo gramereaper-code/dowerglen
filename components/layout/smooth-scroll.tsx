@@ -10,6 +10,10 @@ export function SmoothScroll() {
   useEffect(() => {
     if (reduced) return;
 
+    // Native touch scrolling is more reliable across mobile browsers than a virtual scroll layer.
+    const desktopPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    if (!desktopPointer.matches) return;
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
