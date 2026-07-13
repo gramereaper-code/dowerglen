@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Gauge, ShieldCheck } from "lucide-react";
@@ -11,15 +12,13 @@ const headline = ["PRECISION REPAIRS.", "COMMERCIAL POWER.", "NATIONWIDE SERVICE
 export function HomeHero() {
   return (
     <section className="relative min-h-screen overflow-hidden">
-      <video
+      <Image
         className="absolute inset-0 h-full w-full object-cover opacity-54"
-        src="/videos/VID-20260526-WA0029.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster="/images/IMG-20260526-WA0025.jpg"
-        aria-label="Commercial kitchen repair footage"
+        src="/images/IMG-20260526-WA0021.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/76 via-black/48 to-background" />
       <div className="absolute inset-0 bg-industrial-grid bg-[length:70px_70px] opacity-20" />
