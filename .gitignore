@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.env
+.env.local
+*.log
+tsconfig.tsbuildinfo
+vite-preview-cache/
+preview/
+index.html
+rasheed-local-preview.html
+vite.preview.config.mjs
+OPEN_STATIC_PREVIEW.bat
+INSTALL_AND_RUN_NEXT.bat
+/IMG-*.jpg
+/VID-*.mp4
+/business.py
