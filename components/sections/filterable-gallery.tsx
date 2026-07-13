@@ -51,8 +51,8 @@ export function FilterableGallery({ mode = "gallery" }: { mode?: "gallery" | "po
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.42, delay: Math.min(index * 0.04, 0.28) }}
           >
-            <div className={cn("relative", index % 3 === 0 ? "aspect-[4/5]" : index % 3 === 1 ? "aspect-[16/11]" : "aspect-square")}>
-              <Image src={image.src} alt={image.alt} fill className="object-cover transition duration-700 group-hover:scale-105" sizes="(min-width:1280px) 25vw, (min-width:768px) 50vw, 100vw" />
+            <div className={cn("relative bg-black", index % 3 === 0 ? "aspect-[4/5]" : index % 3 === 1 ? "aspect-[16/11]" : "aspect-square")}>
+              <Image src={image.src} alt={image.alt} fill className="object-contain transition duration-700 group-hover:scale-[1.03]" sizes="(min-width:1280px) 25vw, (min-width:768px) 50vw, 100vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/86 via-transparent to-black/12 opacity-80 transition group-hover:opacity-100" />
               <div className="absolute right-4 top-4 grid size-10 place-items-center rounded-full border border-white/12 bg-black/48 text-white backdrop-blur-md">
                 <Maximize2 size={16} />
