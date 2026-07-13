@@ -12,7 +12,8 @@ export function SmoothScroll() {
 
     // Native touch scrolling is more reliable across mobile browsers than a virtual scroll layer.
     const desktopPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
-    if (!desktopPointer.matches) return;
+    const touchDevice = window.matchMedia("(pointer: coarse)").matches || navigator.maxTouchPoints > 0;
+    if (!desktopPointer.matches || touchDevice) return;
 
     const lenis = new Lenis({
       duration: 1.2,
